@@ -1,0 +1,82 @@
+h1 {
+    color: #054143;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+body {
+    background-color: #98d4e7;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 320px;
+    background-color: #64a4ed;
+    padding: 80px;
+    border-radius: 15px;
+    width: 50%;
+}
+
+.choice-btn {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+}
+
+.choice-btn img {
+    height: 100px;
+    width: 100px;
+    border-radius: 30px;
+}
+
+.choice-btn:hover {
+    background-color: #33e678;
+}
+
+.result {
+    text-align: center;
+    font: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #dbe847;
+    color: rgb(8, 8, 8);
+    margin-top: 5%;
+    margin-left: 10%;
+    border-radius: 15px;
+    width: 80%;
+    padding: 30px;
+}
+
+button {
+    margin: 3px;
+    border-radius: 50%;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    30% {
+        transform: scale(0.9);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+button:active {
+    animation: bounce 2s;
+}

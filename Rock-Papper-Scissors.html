@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3">
+    <title>Game</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/6729/6729732.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>
+        <h1> Rock <==> Scissors <==> Paper</h1>
+    </h1>
+    <div class="game-container">
+
+        <button class="choice-btn" onclick="playGame('rock')">
+            <img src="https://www.clipartmax.com/png/small/406-4069955_rock-paper-scissors-rock-paper-scissors.png" alt="">
+        </button>
+
+        <button class="choice-btn" onclick="playGame('scissors')">
+            <img src="https://i.pinimg.com/474x/67/eb/fd/67ebfd32e898b4ec3ae4e59ae33832c8.jpg" alt="">
+        </button>
+
+        <button class="choice-btn" onclick="playGame('paper')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdcNjyxu3LO-GkStXP78Kd7LUhUB7n27NTzA&s" alt="">
+        </button>
+
+    </div>
+
+    <div class="result">
+        <p id="player-choice"></p>
+        <p id="computer-choice"></p>
+        <p id="game-result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
