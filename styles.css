@@ -1,25 +1,31 @@
+/* Base styles */
 h1 {
     color: #054143;
     text-align: center;
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
 body {
     background-color: #98d4e7;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .game-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 320px;
     background-color: #64a4ed;
     padding: 80px;
     border-radius: 15px;
     width: 50%;
+    margin: 0 auto; /* Centering the game container */
 }
 
+/* Button styling */
 .choice-btn {
     font-size: 20px;
     padding: 10px 20px;
@@ -28,55 +34,105 @@ body {
     border: none;
     border-radius: 50px;
     color: #fff;
+    transition: background-color 0.3s ease;
 }
 
 .choice-btn img {
     height: 100px;
     width: 100px;
     border-radius: 30px;
+    transition: transform 0.3s ease;
 }
 
 .choice-btn:hover {
     background-color: #33e678;
+    transform: scale(1.05); /* Slight zoom on hover */
 }
 
 .result {
     text-align: center;
-    font: sans-serif;
     font-weight: bold;
     font-size: 20px;
     background-color: #dbe847;
-    color: rgb(8, 8, 8);
-    margin-top: 5%;
-    margin-left: 10%;
+    color: #080808;
+    margin: 5% auto 0; /* Centers and adjusts margin */
     border-radius: 15px;
     width: 80%;
     padding: 30px;
 }
 
-button {
-    margin: 3px;
-    border-radius: 50%;
-}
-
+/* Bounce animation for button click */
 @keyframes bounce {
     0% {
         transform: scale(1);
     }
-
     30% {
         transform: scale(0.9);
     }
-
     50% {
         transform: scale(1.1);
     }
-
     100% {
         transform: scale(1);
     }
 }
 
 button:active {
-    animation: bounce 2s;
+    animation: bounce 0.3s;
+}
+
+/* General button styling */
+button {
+    margin: 3px;
+    border-radius: 50%;
+}
+
+/* Responsive Styles for Tablets */
+@media (max-width: 768px) {
+    .game-container {
+        flex-wrap: wrap; /* Ensures buttons stack on smaller screens */
+        padding: 40px;
+        width: 80%; /* Make the container wider on smaller screens */
+    }
+
+    .choice-btn img {
+        height: 80px;
+        width: 80px; /* Adjust image size for smaller screens */
+    }
+
+    .result {
+        font-size: 18px;
+        width: 90%; /* Adjust result container for smaller screens */
+        padding: 20px;
+    }
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+        margin: 10px;
+    }
+
+    .game-container {
+        width: 100%; /* Full width on mobile */
+        padding: 20px;
+        margin: 0;
+    }
+
+    .choice-btn {
+        font-size: 16px; /* Reduce font size on mobile */
+        padding: 5px 10px;
+    }
+
+    .choice-btn img {
+        height: 60px;
+        width: 60px; /* Smaller images for mobile */
+    }
+
+    .result {
+        font-size: 16px;
+        width: 100%;
+        padding: 15px;
+    }
 }
